@@ -71,7 +71,7 @@ function submitPost(){
     const novamarca = form["marca"].value;
     
 
-    const novo = {"name": novaguit , "type" : novamarca};
+    const novo = {"name": novaguit , "marca" : novamarca};
     
     callFetchWithPost(novo);
     return false;
@@ -84,7 +84,7 @@ function submitPut(){
     const novamarca = form["marca"].value;
     
 
-    const novo = {"name": novaguit , "type" : novamarca};
+    const novo = {"name": novaguit , "marca" : novamarca};
     
     callFetchWithPut(id, novo);
     return false;
