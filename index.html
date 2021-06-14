@@ -2,26 +2,20 @@
 <html>
     <head>
         <title>
-            Dream Team
+            Guitar Heaven
         </title>
         <meta charset="UTF-8"/>
         <script src='fetch.js'></script>
     </head>
     <body>
-       <!-- <h2>Padrão Rest</h2>-->
-       <!-- <a href="javascript:callFetchWithGet()">Get</a> -->
-       <!-- <a href="javascript:callFetchWithPost('Pikachu')"> Post</a> -->
-       <!-- <a href="javascript:callFetchWithPut(1,'Raichu')">Put</a> -->
-       <!-- <a href="javascript:callFetchWithDelete(11)">Delete</a> -->
-       <!-- <p id='json'></p> -->
 
-        <h2>Formulario Basico (Post)</h2>
+        <h2>Formulario (Post)</h2>
         <form id="postForm">
-             <label for="entrarcraque">craque:</label>
-             <input type="text" name="craque" id="entrarcraque"/>
+             <label for="entrarguitarra">Guitarra:</label>
+             <input type="text" name="Guitarra" id="entrarguitarra"/>
 
-             <label for="entrartype">Type:</label>
-             <input type="text" name="type" id="entrartype"/>
+             <label for="entrarmarca">Marca:</label>
+             <input type="text" name="Marca" id="entrarmarca"/>
 
 
              <button type="submit" onclick="return submitPost()">Submit</button>
@@ -29,26 +23,26 @@
 
 
 
-        <h2>Formulario Basico (Put)</h2>
+        <h2>Formulario (Put)</h2>
         <form id="putForm">
             <label>Id:
             <input type="text" name="id"/>
             </label>
 
 
-            <label>craque:
-            <input type="text" name="craque"/>
+            <label>Guitarra:
+            <input type="text" name="guitarra"/>
             </label>
 
-            <label>Type:
-            <input type="text" name="type"/>
+            <label>Marca:
+            <input type="text" name="Marca"/>
             </label>
 
 
             <button type="submit" onclick="return submitPut()">Submit</button>
        </form>
 
-       <h2>Formulario Basico (Delete)</h2>
+       <h2>Formulario (Delete)</h2>
        <form id="deleteForm">
         <label>Id:
         <input type="text" name="id"/>
