@@ -18,7 +18,7 @@ async function callFetchWithGet(){
     }
 }
 
-async function callFetchWithPost(craque){
+async function callFetchWithPost(Guitarra){
     const options = {
         method : 'POST',
         mode: 'cors',
