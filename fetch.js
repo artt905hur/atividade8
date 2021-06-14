@@ -68,10 +68,10 @@ function submitPost(){
     console.log("Nova guitarra no inventario");
     const form = document.forms['postForm'];    
     const novaguit = form["heaven"].value;
-    const novamarca = form["marca"].value;
+    const novamarca = form["type"].value;
     
 
-    const novo = {"name": novaguit , "marca" : novamarca};
+    const novo = {"name": novaguit , "type" : novamarca};
     
     callFetchWithPost(novo);
     return false;
@@ -81,10 +81,10 @@ function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
     const novaguit = form["heaven"].value;
-    const novamarca = form["marca"].value;
+    const novamarca = form["type"].value;
     
 
-    const novo = {"name": novaguit , "marca" : novamarca};
+    const novo = {"name": novaguit , "type" : novamarca};
     
     callFetchWithPut(id, novo);
     return false;
