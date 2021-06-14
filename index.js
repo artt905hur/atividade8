@@ -11,10 +11,10 @@ async function callFetchWithGet(){
     const response = await fetch(url, options);
 
     if (response.status >= 200 && response.status <= 300){
-        console.log("Funcionou");
+        console.log("Running");
         output.innerHTML = await response.text();
     } else {
-        console.log("Deu errado");
+        console.log("Fail");
     }
 }
 
@@ -27,13 +27,13 @@ async function callFetchWithPost(craque){
             'content-type' : 'application/json'
         },
         body : JSON.stringify({
-            'times' : craque
+            'heavens' : Marca
         })
     }
     await fetch(url, options);
 }
 
-async function callFetchWithPut(id, novoCraque){
+async function callFetchWithPut(id, novaGuitarra){
     const options = {
         method : 'PUT',
         mode: 'cors',
@@ -42,7 +42,7 @@ async function callFetchWithPut(id, novoCraque){
             'content-type' : 'application/json'
         },
         body : JSON.stringify({
-            'times' : novoCraque
+            'heavens' : novaGuitarra
         })
     }
     await fetch(`${url}/${id}`, options);
@@ -65,34 +65,34 @@ async function callFetchWithDelete(id){
 */
 
 function submitPost(){
-    console.log("entrei na função");
+    console.log("Nova guitarra no inventario");
     const form = document.forms['postForm'];    
-    const novocra = form["time"].value;
-    const novotype = form["type"].value;
+    const novaguit = form["heaven"].value;
+    const novamarca = form["marca"].value;
     
 
-    const novo = {"name": novocra , "type" : novotype};
+    const novo = {"name": novaguit , "type" : novamarca};
     
     callFetchWithPost(novo);
-    return false; // Evitar o reload da tela.
+    return false;
 }
 
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const novocra = form["time"].value;
-    const novotype = form["type"].value;
+    const novaguit = form["heaven"].value;
+    const novamarca = form["marca"].value;
     
 
-    const novo = {"name": novocra , "type" : novotype};
+    const novo = {"name": novaguit , "type" : novamarca};
     
     callFetchWithPut(id, novo);
-    return false; // Evitar o reload da tela.
+    return false;
 }
 
 function submitDelete(){
     const form = document.forms['deleteForm'];  
     const id = form["id"].value; 
     callFetchWithDelete(id);
-    return false; // Evitar o reload da tela.
+    return false;
 }
