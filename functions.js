@@ -67,32 +67,30 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("Nova guitarra no inventario");
     const form = document.forms['postForm'];    
-    const novaguit = form["heaven"].value;
-    const novamarca = form["type"].value;
-    
+    const novaguit = form["Guitarra"].value;
+    const novotype = form["type"].value;
 
-    const novo = {"name": novaguit , "type" : novamarca};
+    const novo = {"name": novaguit , "type" : novotype};
     
     callFetchWithPost(novo);
-    return false;
+    return false; // Evitar o reload da tela.
 }
 
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const novaguit = form["heaven"].value;
-    const novamarca = form["type"].value;
-    
+    const novaguit = form["Guitarra"].value;
+    const novotype = form["type"].value;
 
-    const novo = {"name": novaguit , "type" : novamarca};
+    const novo = {"name": novaguit , "type" : novotype};
     
     callFetchWithPut(id, novo);
-    return false;
+    return false; // Evitar o reload da tela.
 }
 
 function submitDelete(){
     const form = document.forms['deleteForm'];  
-    const id = form["id"].value; 
+    const id = form["id"].value;  
     callFetchWithDelete(id);
-    return false;
+    return false; // Evitar o reload da tela.
 }
