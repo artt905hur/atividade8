@@ -73,7 +73,7 @@ function submitPost(){
     const novo = {"name": novaguit , "type" : novotype};
     
     callFetchWithPost(novo);
-    return false; // Evitar o reload da tela.
+    return false;
 }
 
 function submitPut(){
@@ -85,12 +85,12 @@ function submitPut(){
     const novo = {"name": novaguit , "type" : novotype};
     
     callFetchWithPut(id, novo);
-    return false; // Evitar o reload da tela.
+    return false;
 }
 
 function submitDelete(){
     const form = document.forms['deleteForm'];  
     const id = form["id"].value;  
     callFetchWithDelete(id);
-    return false; // Evitar o reload da tela.
+    return false;
 }
