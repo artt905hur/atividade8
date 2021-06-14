@@ -27,7 +27,7 @@ async function callFetchWithPost(Guitarra){
             'content-type' : 'application/json'
         },
         body : JSON.stringify({
-            'heavens' : Marca
+            'heavens' : Guitarra
         })
     }
     await fetch(url, options);
