@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>
-            Guitar Heaven
+            Aula 11
         </title>
         <meta charset="UTF-8"/>
-        <script src='fetch.js'></script>
+        <script src='js/functions.js'></script>
     </head>
     <body>
 
@@ -14,9 +14,8 @@
              <label for="entrarguitarra">Guitarra:</label>
              <input type="text" name="Guitarra" id="entrarguitarra"/>
 
-             <label for="entrarmarca">Marca:</label>
-             <input type="text" name="type" id="entrarmarca"/>
-
+             <label for="entrartype">Type:</label>
+             <input type="text" name="type" id="entrartype"/>
 
              <button type="submit" onclick="return submitPost()">Submit</button>
         </form>
@@ -34,10 +33,9 @@
             <input type="text" name="Guitarra"/>
             </label>
 
-            <label>Marca:
+            <label>Type:
             <input type="text" name="type"/>
             </label>
-
 
             <button type="submit" onclick="return submitPut()">Submit</button>
        </form>
